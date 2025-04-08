@@ -1,4 +1,6 @@
 # OpenAPI Java Generator Complex Defaults Bug
+https://github.com/OpenAPITools/openapi-generator/issues/21051
+
 This generates a Java client for the OpenAPI spec in `openapi.yaml` using the OpenAPI Generator. The 
 generated code has a bug where the default value for a complex object is not set correctly.
 
