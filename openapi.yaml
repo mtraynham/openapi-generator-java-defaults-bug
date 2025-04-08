@@ -1,0 +1,70 @@
+openapi: 3.1.0
+info:
+  title: Petstore API
+  description: Petstore API
+  version: 1.0.0
+servers:
+  - url: 'http://localhost'
+components:
+  schemas:
+    # Not generated - free-form object
+    EmptyReferenceObject:
+      type: object
+      default: {}
+    ComplexReferenceObject:
+      type: object
+      default:
+        foo: bar
+      properties:
+        foo:
+          type: string
+          nullable: true
+    NullableEmptyReferenceObject:
+      type: object
+      default: {}
+      nullable: true
+    NullableComplexReferenceObject:
+      type: object
+      default:
+        foo: bar
+      properties:
+        foo:
+          type: string
+          nullable: true
+      nullable: true
+    Test:
+      type: object
+      properties:
+        testEmptyInlineObject:
+          type: object
+          default: {}
+        testComplexInlineObject:
+          type: object
+          default:
+            foo: bar
+          properties:
+            foo:
+              type: string
+              nullable: true
+        testNullableEmptyInlineObject:
+          type: object
+          default: {}
+          nullable: true
+        testNullableComplexInlineObject:
+          type: object
+          default:
+            foo: bar
+          properties:
+            foo:
+              type: string
+              nullable: true
+          nullable: true
+        testEmptyReference:
+          $ref: '#/components/schemas/EmptyReferenceObject'
+        testComplexReference:
+          $ref: '#/components/schemas/ComplexReferenceObject'
+        testNullableEmptyReference:
+          $ref: '#/components/schemas/NullableEmptyReferenceObject'
+        testNullableComplexReference:
+          $ref: '#/components/schemas/NullableComplexReferenceObject'
+

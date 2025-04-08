@@ -1,0 +1,7 @@
+generatorName: java
+globalProperties:
+  api: 'false'
+  apiDocs: 'false'
+  apiTests: 'false'
+  modelDocs: 'false'
+  modelTests: 'false'
